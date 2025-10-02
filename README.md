@@ -57,15 +57,7 @@ Botones redondeados (rounded-4), cards con sombra suave y cabeceras de tabla des
 
 Tipografía base Open Sans.
 
-Cómo usar
 
-Clona este repositorio.
-
-Abre index.html en tu navegador o inicia un servidor local:
-
-VS Code → extensión Live Server.
-
-Python: python -m http.server y visita http://localhost:8000.
 
 Personalización
 
