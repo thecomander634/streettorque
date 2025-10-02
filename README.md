@@ -79,17 +79,9 @@ Navegación
 
 Inicio → index.html
 
-Eventos → events.html
+Eventos → events.html/secondary.html se accede dandole a productos
 
-Contacto → contact.html
+Contacto → contact.html se accede desde el footer de index.html, al hacer click en la etiqueta <a> de contacto.
 
-Registro → registro.html
+Registro → registro.html al hacer click en unete, dentro de la tarjeta grande en index, te lleva a una pagina independiente de registro.
 
-Despliegue (opcional)
-
-GitHub Pages: Settings → Pages → Source = main (root).
-La web quedará disponible en https://<usuario>.github.io/<repo>/.
-
-Licencia
-
-Uso educativo/demostrativo. Reemplaza imágenes y textos para uso comercial.
