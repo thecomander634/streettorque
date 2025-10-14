@@ -33,7 +33,6 @@ $("nav form").on("submit", function(evento) {
   // Mostrar la sección de productos
   $("[data-section]").hide();
   $("#events-section").show();
-  $("nav.navbar").find("form.d-flex").css("display", "flex");
 
   // Si no se escribió nada, mostrar todas las cards
   if (textoBusqueda === "") {
