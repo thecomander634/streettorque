@@ -1,87 +1,114 @@
-StreetTorque Garage — Web estática (Bootstrap 5)
+# 🏎️ StreetTorque Garage — Web SPA (Bootstrap 5 + jQuery)
 
-Sitio estático de temática tuning & detailing construido con Bootstrap 5.
-Incluye 4 páginas: index.html, events.html, contact.html y registro.html.
+Sitio estático de temática **tuning & detailing**, construido con **Bootstrap 5** y convertido en una **Single Page Application (SPA)** con jQuery.
 
-Estructura
+Incluye **4 secciones** dentro de un único `index.html`: Inicio, Productos, Contacto y Registro.
+
+---
+
+## 📂 Estructura
+
 / (raíz)
-├─ index.html        # Portada con hero y productos destacados
-├─ events.html       # Tabla de quedadas, rutas y meets
-├─ contact.html      # Formulario de contacto
-├─ registro.html     # Formulario de inscripción a eventos
+├─ index.html # Página única con todas las secciones (SPA)
+├─ styles/
+│ └─ styles.css # Estilos personalizados
+├─ assets/
+│ └─ images/ # Imágenes locales
+├─ SPA.js # Script principal de navegación y buscador
 └─ README.md
 
+yaml
+Copiar código
 
-Las imágenes se cargan desde U archivos locales (carpeta images/).
+---
 
-Tecnologías
+## ⚙️ Tecnologías
 
-HTML5 + CSS
+- 🧱 **HTML5 + CSS3**
+- 🎨 **Bootstrap 5.3 (CDN)**
+- ⚡ **jQuery 3.7.1**
+- ✍️ **Google Fonts:** Open Sans
 
-Bootstrap 5.3 (CDN)
+---
 
-Google Fonts: Open Sans
+## 🧱 Estructura de la SPA
 
-Páginas incluidas
-index.html
+Cada parte del sitio está dentro de `index.html` y se muestra dinámicamente:
 
-Navbar con enlaces a todas las páginas y botón Inscribirme.
+| Sección | ID / Data-target | Descripción |
+|----------|------------------|--------------|
+| 🏠 Inicio | `home-section` | Portada con hero y productos destacados |
+| 🛠️ Productos | `events-section` | Catálogo de piezas y kits tuning |
+| ✉️ Contacto | `contact-section` | Datos de contacto, redes sociales y mapa |
+| 🧾 Registro | `register-section` | Formulario de alta de usuario |
 
-Hero con texto y CTA a Eventos.
+---
 
-Sección Destacados: 3 cards con imagen, descripción y precio.
+## 🧠 Funcionamiento del `SPA.js`
 
-events.html
+El script controla la navegación y visibilidad de las secciones sin recargar la página:
 
-Tabla responsive con: Fecha, Hora, Evento, Nivel, Ubicación, Precio, Plazas.
+- Usa los atributos `data-target` y `data-section` para **mostrar una sola sección** a la vez.  
+- Oculta todas las secciones al inicio excepto `#home-section`.  
+- Muestra u oculta el **buscador del navbar** según la sección:
+  - 🔍 Solo visible en **Productos (`#events-section`)**.
+- Permite moverse entre secciones sin recargar la página.
 
-Botón Apuntarme que abre registro.html y pasa el nombre del evento en la query (?evento=Nombre).
+---
 
-contact.html
+## 🔍 Buscador dinámico
 
-Formulario con campos: Nombre, Email, Motivo (select), Mensaje y aceptación de privacidad.
+El buscador del navbar **filtra los productos** dentro de la sección de eventos (`#events-section`).
 
-Bloque con datos de ubicación/horario/teléfono (texto).
+### Funcionamiento:
+1. El usuario escribe un término y pulsa **Buscar**.  
+2. La SPA muestra la sección de productos.  
+3. Se comparan los textos de los títulos `<h5>` de las tarjetas (`.card`).  
+4. Solo se muestran las cards que **contienen el texto buscado** (sin importar mayúsculas/minúsculas).  
+5. Si el campo está vacío, se vuelven a mostrar todas las tarjetas.
 
-registro.html
+### Detalles técnicos:
+- Se filtran las **columnas completas** (`.col-sm-6`, `.col-lg-3`) para mantener el grid sin huecos.  
+- La comparación se hace con `toUpperCase()` para ignorar el uso de mayúsculas.
 
-Formulario: Nombre, Apellidos, Email, Teléfono, Evento, Fecha, Asistentes, Términos.
+---
 
-Script que rellena Evento si vienes desde events.html con ?evento=....
+## 🎨 Estilo
 
-Estilo
+- 🎨 Color primario configurable: `--bs-primary` (`#844315` por defecto).  
+- 💡 Cards con sombra suave y botones personalizados.  
+- 🖋️ Tipografía base: **Open Sans** (Google Fonts).  
 
-Color primario configurable mediante la variable --stq-primary (por defecto #ED6E12).
+---
 
-Botones redondeados (rounded-4), cards con sombra suave y cabeceras de tabla destacadas.
+## 🧩 Personalización rápida
 
-Tipografía base Open Sans.
+| Elemento | Dónde cambiar |
+|-----------|----------------|
+| 🎨 Color corporativo | Variable `--bs-primary` en `<style>` |
+| 🖼️ Imágenes | Carpeta `/assets/images/` |
+| ✍️ Tipografía | Enlace de Google Fonts en el `<head>` |
 
+---
 
+## ♿ Accesibilidad
 
-Personalización
+- Todas las imágenes incluyen atributo `alt`.  
+- Formularios con etiquetas `label` asociadas.  
+- Contraste adecuado en botones y encabezados.  
 
-Color corporativo: busca --stq-primary en la etiqueta <style> de cada página y cambia el valor.
+---
 
-Imágenes: sustituye los src por rutas locales y crea la carpeta img/.
+## 🚀 Navegación del sitio
 
-Tipografía: cambia el <link> de Google Fonts y actualiza --bs-body-font-family.
+| Opción del menú | Acción |
+|------------------|--------|
+| 🏠 **Inicio** | Muestra `#home-section` |
+| 🛠️ **Productos** | Muestra `#events-section` y activa el buscador |
+| ✉️ **Contacto** | Muestra `#contact-section` |
+| 🧾 **Registro** | Muestra `#register-section` |
 
-Accesibilidad
+---
 
-Todas las imágenes llevan alt.
-
-Formularios con label asociados y campos required.
-
-Contraste suficiente en botones y cabeceras.
-
-Navegación
-
-Inicio → index.html
-
-Eventos → events.html/secondary.html se accede dandole a productos
-
-Contacto → contact.html se accede desde el footer de index.html, al hacer click en la etiqueta <a> de contacto.
-
-Registro → registro.html al hacer click en unete, dentro de la tarjeta grande en index, te lleva a una pagina independiente de registro.
-
+© **StreetTorque Garage — Tuning & Detailing**  
+Diseño y desarrollo web con ❤️ usando **Bootstrap + jQuery**
