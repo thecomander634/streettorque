@@ -9,9 +9,10 @@
     <style> :root {
   --bs-primary: #844315;             /* tu naranja */
   --bs-primary-rgb: 237, 110, 18;    /* valores RGB del mismo color */
-
 }
 </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="./SPA.js"></script>
   </head>
   <body>
     <!-- nav-->
@@ -19,7 +20,7 @@
   <div class="row bg-info text-white">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">StreetTorque</a>
+        <a class="navbar-brand" href="#" data-target="home-section">StreetTorque</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -27,22 +28,13 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active fw-bold" aria-current="page" href="#">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="./secondary.html">Productos</a></li>
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                 data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Llantas</a></li>
-                <li><a class="dropdown-item" href="#">Escapes</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Coilovers</a></li>
-              </ul>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="#" data-target="events-section">Productos</a></li>
 
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Ofertas</a>
+              <a class="nav-link disabled" tabindex="-1" aria-disabled="true">Ofertas</a>
+            </li>
+                        <li class="nav-item">
+              <a class="nav-link" tabindex="-1" data-target="contact-section">Contacto</a>
             </li>
           </ul>
 
@@ -57,13 +49,15 @@
 </div>
 <!-- Nombre de la empresa debajo del nav-->
 <!-- text cards -->
+   <main>
+      <section id="home-section"data-section>
 <div>
 <main class="container py-5">
 <div class="p-5 mb-4 bg-light rounded-3">
 <div class="container-fluid py-5">
 <h2 class="display-6 fw-semibold">Bienvenido</h2>
 <p class="col-md-8 fs-5">Aun no has iniciado sesion? regístrate y disfruta las ventajas</p>
-<a class="btn btn-primary btn-lg bg-primary" href="./register.html">Unirme</a>
+<a class="btn btn-primary btn-lg bg-primary" data-target="register-section">Unirme</a>
 </div>
 </div>
 <div class="row g-4">
@@ -106,6 +100,294 @@
 <!--footer-->
 </div>
 
+    </section>
+      <section id="events-section"data-section>
+          <main class="container py-5">
+      <h2 class="mb-4 fw-semibold">Catálogo de Productos</h2>
+      <div class="row g-4">
+        
+        <!-- Bodykits (4 cards) -->
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100">
+            <img src="./assets/images/3963e615-1ab4-432e-ab66-05d86b046582.jpg" class="card-img-top" alt="Bodykit 1">
+            <div class="card-body">
+              <h5 class="card-title">Bodykit Nissan</h5>
+              <p class="card-text">Alerones y faldones racing.</p>
+              <a href="#" class="btn btn-primary bg-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100">
+            <img src="./assets/images/bmwimg.jpg" class="card-img-top" alt="Bodykit 2">
+            <div class="card-body">
+              <h5 class="card-title">Bodykit BMW</h5>
+              <p class="card-text">Paragolpes y difusor trasero.</p>
+              <a href="#" class="btn btn-primary bg-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100">
+            <img src="./assets/images/supraimg.jpg" class="card-img-top" alt="Bodykit 3">
+            <div class="card-body">
+              <h5 class="card-title">Bodykit Supra</h5>
+              <p class="card-text">Kit ancho completo.</p>
+              <a href="#" class="btn btn-primary bg-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100">
+            <img src="./assets/images/civicimg.jpg" class="card-img-top" alt="Bodykit 4">
+            <div class="card-body">
+              <h5 class="card-title">Bodykit Civic</h5>
+              <p class="card-text">Splitter delantero y alerón.</p>
+              <a href="#" class="btn btn-primary bg-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reprogramaciones (4 cards) -->
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100">
+            <img src="./assets/images/stage1img.jpg" class="card-img-top" alt="Reprogramación 1">
+            <div class="card-body">
+              <h5 class="card-title">Stage 1</h5>
+              <p class="card-text">Optimización para calle.</p>
+              <a href="#" class="btn btn-primary bg-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100">
+            <img src="./assets/images/honda-civic-15-t-182-1-uwn-357.png" class="card-img-top" alt="Reprogramación 2">
+            <div class="card-body">
+              <h5 class="card-title">Stage 2</h5>
+              <p class="card-text">Mayor potencia y par motor.</p>
+              <a href="#" class="btn btn-primary bg-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100">
+            <img src="./assets/images/FB-IMG_1691005423615_grande.webp" class="card-img-top" alt="Reprogramación 3">
+            <div class="card-body">
+              <h5 class="card-title">Stage 3</h5>
+              <p class="card-text">Máximo rendimiento para pista.</p>
+              <a href="#" class="btn btn-primary bg-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100">
+            <img src="./assets/images/stage 0.jpg" class="card-img-top" alt="Reprogramación 4">
+            <div class="card-body">
+              <h5 class="card-title">Eco-tune</h5>
+              <p class="card-text">Consumo reducido sin perder fuerza.</p>
+              <a href="#" class="btn btn-primary bg-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Turbos (4 cards) -->
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100">
+            <img src="./assets/images/hturbo.jpg" class="card-img-top" alt="Turbo 1">
+            <div class="card-body">
+              <h5 class="card-title">Turbo híbrido</h5>
+              <p class="card-text">Instalación directa bolt-on.</p>
+              <a href="#" class="btn btn-primary bg-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100">
+            <img src="./assets/images/cturbo.png" class="card-img-top" alt="Turbo 2">
+            <div class="card-body">
+              <h5 class="card-title">Turbo de competición</h5>
+              <p class="card-text">Alta presión para circuitos.</p>
+              <a href="#" class="btn btn-primary bg-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100">
+            <img src="./assets/images/tditurbo.jpg" class="card-img-top" alt="Turbo 3">
+            <div class="card-body">
+              <h5 class="card-title">Turbo diesel upgrade</h5>
+              <p class="card-text">Potencia extra para TDI.</p>
+              <a href="#" class="btn btn-primary bg-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100">
+            <img src="./assets/images/twturbo.jpg" class="card-img-top" alt="Turbo 4">
+            <div class="card-body">
+              <h5 class="card-title">Twin turbo kit</h5>
+              <p class="card-text">Kit completo para máxima potencia.</p>
+              <a href="#" class="btn btn-primary bg-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    </section>
+      <section id="contact-section"data-section>
+    <style>
+      :root {
+        --bs-primary: #844315;
+        --bs-primary-rgb: 237, 110, 18;
+      }
+      /* Ajustes concretos para el hero de contacto */
+      .contact-hero {
+        min-height: 64vh;
+        display: grid;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .contact-card {
+        background: rgba(255,255,255,0.03);
+        padding: 2rem;
+        border-radius: .75rem;
+      }
+      .contact-item { margin-bottom: .75rem; }
+      .contact-item strong { display:inline-block; width:110px; }
+      /* iframe responsivo */
+      .map-embed {
+        width:100%;
+        height:320px;
+        border:0;
+        border-radius:.5rem;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.12);
+      }
+      @media(min-width:992px){
+        .map-embed { height:420px; }
+      }
+    </style>
+    <!-- HERO contacto -->
+    <main class="container py-5">
+      <section class="contact-hero">
+        <div class="row g-4 align-items-center">
+          <!-- Columna info -->
+          <div class="col-12 col-lg-5">
+            <div class="contact-card">
+              <h2 class="h4 fw-semibold mb-3">Contacto</h2>
+              <p class="text-secondary mb-4">¿Tienes dudas sobre piezas, montaje o reservas? Escríbenos o pásate por el taller.</p>
+
+              <div class="contact-item">
+                <strong>Teléfono:</strong>
+                <a class="text-decoration-none" href="tel:+34999999999">+34 999 99 99 99</a>
+              </div>
+
+              <div class="contact-item">
+                <strong>Email:</strong>
+                <a class="text-decoration-none" href="mailto:info@streettorque.example">info@streettorque.example</a>
+              </div>
+
+              <div class="contact-item">
+                <strong>WhatsApp:</strong>
+                <a class="text-decoration-none" href="https://wa.me/34999999999" target="_blank" rel="noopener">+34 999 99 99 99</a>
+              </div>
+
+              <div class="contact-item">
+                <strong>Instagram:</strong>
+                <a class="text-decoration-none" href="https://instagram.com/streettorque_example" target="_blank" rel="noopener">@streettorque_example</a>
+              </div>
+
+              <div class="contact-item">
+                <strong>TikTok:</strong>
+                <a class="text-decoration-none" href="https://tiktok.com/@streettorque_example" target="_blank" rel="noopener">@streettorque_example</a>
+              </div>
+
+              <hr class="my-3">
+
+              <p class="small text-muted mb-0">Horario: L-V 09:00–19:00 · Sáb 10:00–14:00</p>
+            </div>
+          </div>
+
+          <!-- Columna mapa -->
+          <div class="col-12 col-lg-7">
+            <!-- Iframe de Google Maps -->
+            <iframe
+              class="map-embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3125.0000000000005!2d-0.1277583!3d51.5073509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3333333333%3A0xabcdefabcdefabcd!2sLondon!5e0!3m2!1ses!2ses!4v0000000000000"
+              loading="lazy"
+              allowfullscreen=""
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa - StreetTorque">
+            </iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </section>
+    <section id="register-section"data-section>
+         <div class="container">
+ 
+</div>
+      </div>
+    </nav>
+
+    <!-- FORMULARIO DE REGISTRO -->
+    <main class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h1 class="h4 mb-4 text-center">Registro de usuario</h1>
+              <form>
+                <!-- Nombre -->
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre completo</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Ej: Juan Pérez" required>
+                </div>
+                <!-- Email -->
+                <div class="mb-3">
+                  <label for="email" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="email" placeholder="nombre@correo.com" required>
+                </div>
+                <!-- Contraseña -->
+                <div class="mb-3">
+                  <label for="password" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="password" required>
+                </div>
+                <!-- Confirmar Contraseña -->
+                <div class="mb-3">
+                  <label for="password2" class="form-label">Confirmar contraseña</label>
+                  <input type="password" class="form-control" id="password2" required>
+                </div>
+                <!-- Teléfono -->
+                <div class="mb-3">
+                  <label for="telefono" class="form-label">Teléfono</label>
+                  <input type="tel" class="form-control" id="telefono" placeholder="+34 600 000 000">
+                </div>
+                <!-- Botón -->
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary bg-primary">Crear cuenta</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    </section>
+
 <footer class="border-top py-1">
   <div class="container bg-primary text-white rounded-3">
     <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
@@ -116,12 +398,13 @@
       <ul class="nav small">
         <li class="nav-item"><a class="nav-link px-2 text-muted" href="#">Catálogo</a></li>
         <li class="nav-item"><a class="nav-link px-2 text-muted" href="#">Eventos</a></li>
-        <li class="nav-item"><a class="nav-link px-2 text-muted" href="./contact.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-muted" href="#" >Contacto</a></li>
       </ul>
     </div>
     <div class="small text-muted mt-3">© StreetTorque Garage — Tuning & Detailing</div>
   </div>
 </footer>
+    <script src="./SPA.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   </body>
 </html>
