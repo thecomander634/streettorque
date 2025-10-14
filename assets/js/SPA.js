@@ -3,7 +3,7 @@ $(document).ready(function() {
   $("[data-section]").hide();
 
   // Mostrar solo la sección de inicio
-    $("#home-section").show();
+    $("#home-section").fadeIn(200);
 
   // Cuando se hace clic en un enlace del menú o botón
   $("[data-target]").on("click", function(evento) {
@@ -14,10 +14,10 @@ $(document).ready(function() {
     var destino = $(this).attr("data-target");
 
     // Ocultar todas las secciones
-    $("[data-section]").hide();
+    $("[data-section]").fadeOut(300);
 
     // Mostrar solo la sección seleccionada
-    $("#" + destino).show();
+    $("#" + destino).fadeIn(400);
 
     // Subir arriba al cambiar de sección
     window.scrollTo(0, 0);
