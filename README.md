@@ -78,6 +78,7 @@ El buscador del navbar **filtra los productos** dentro de la sección de eventos
 - 🎨 Color primario configurable: `--bs-primary` (`#844315` por defecto).  
 - 💡 Cards con sombra suave y botones personalizados.  
 - 🖋️ Tipografía base: **Open Sans** (Google Fonts).  
+![for-the-tahoma-ms-posters-4](https://github.com/user-attachments/assets/ed97e04e-7704-4a99-a48d-729d58601ff0)
 
 ---
 
