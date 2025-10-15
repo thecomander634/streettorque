@@ -34,3 +34,23 @@ color: rgb(255, 255, 255);
   border: none;
   color: white;
 }
+/* CARD de registro
+.p-5.mb-4.rounded-3{
+
+}
+*/
+.navbar.navbar-expand-lg {
+background: linear-gradient(135deg, #555555, #2e2e2e);
+}
+.container.border-bottom.py-3 {
+background: none;
+}
+.btn.btn-outline-success.bg-secondary.text-white {
+  border:none;
+  transition: transform .2s, box-shadow .2s;
+}
+.btn-outline-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 1.2rem rgb(199, 199, 199);
+  /*horizontal, vertical y y grosor de la sombra*/
+}
