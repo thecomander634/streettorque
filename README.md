@@ -110,7 +110,7 @@ El buscador del navbar **filtra los productos** dentro de la sección de eventos
 | 🛠️ **Productos** | Muestra `#events-section` |
 | ✉️ **Contacto** | Muestra `#contact-section` |
 | 🧾 **Registro** | Muestra `#register-section` |
-|  **VBUSCADOR** | para resetear refrescar página |
+|  **BUSCADOR** | para resetear refrescar página |
 
 ---
 
