@@ -78,6 +78,8 @@ El buscador del navbar **filtra los productos** dentro de la sección de eventos
 - 🎨 Color primario configurable: `--bs-primary` (`#844315` por defecto).  
 - 💡 Cards con sombra suave y botones personalizados.  
 - 🖋️ Tipografía base: **Open Sans** (Google Fonts). 
+  # 🎨 PALETA
+- https://coolors.co/707070-000000-ffffff-555555-844315
 
 ---
 
