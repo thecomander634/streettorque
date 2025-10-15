@@ -1,56 +1,16 @@
-/* color de fondo */
 body {
-  background: linear-gradient(135deg, #555555, #1d1d1d);
-  color: #f2f2f2;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .footer-log{  width:150px; height:100px; object-fit:contain;background-color: rgb(116, 116, 116);
 }
 .card {
   transition: transform .2s, box-shadow .2s;
-  background-color: #707070;
 }
-/* animaciones */
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 1rem 1rem rgb(0,0,0,);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
 }
 .btn-primary:hover {
   box-shadow: 0 0 20px rgba(237,110,18,.6);
-}
-
-.card .card-title{
-  color: rgb(255, 255, 255);
-}
-.display-6.fw-semibold{
-color: rgb(255, 255, 255);
-}
-.card-body{
-  background-color:rgb(112, 112, 112);
-}
-/* quitar borde azul bootstarp, letras en blanco en los botones*/
-.btn.btn-primary {
-  border: none;
-  color: white;
-}
-/* CARD de registro
-.p-5.mb-4.rounded-3{
-
-}
-*/
-.navbar.navbar-expand-lg {
-background: linear-gradient(135deg, #555555, #2e2e2e);
-}
-.container.border-bottom.py-3 {
-background: none;
-}
-.btn.btn-outline-success.bg-secondary.text-white {
-  border:none;
-  transition: transform .2s, box-shadow .2s;
-}
-.btn-outline-success:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 1.2rem rgb(199, 199, 199);
-  /*horizontal, vertical y y grosor de la sombra*/
 }
