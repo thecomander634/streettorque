@@ -66,6 +66,11 @@ Color corporativo: busca --stq-primary en la etiqueta <style> de cada página y 
 Imágenes: sustituye los src por rutas locales y crea la carpeta img/.
 
 Tipografía: cambia el <link> de Google Fonts y actualiza --bs-body-font-family.
+🖋️ Tipografía base: Open Sans (Google Fonts). for-the-tahoma-ms-posters-4
+![for-the-tahoma-ms-posters-4](https://github.com/user-attachments/assets/ab99466f-7121-4902-b422-8b3d15a187e3)
+🎨 PALETA
+https://coolors.co/707070-000000-ffffff-555555-844315
+
 
 Accesibilidad
 
