@@ -55,3 +55,33 @@ $("nav form").on("submit", function(evento) {
   // Subir arriba después de filtrar
   window.scrollTo(0, 0);
 });
+  // Ocultar todos los <p> de las cards al inicio
+  $(".card .card-text").hide();
+
+  // Al hacer clic en una card
+  $(".card").on("click", function() {
+    // Cerrar cualquier otra descripción abierta
+    $(".card .card-text").not($(this).find(".card-text")).slideUp();
+
+    // Alternar la visibilidad de la descripción de esta card
+    $(this).find(".card-text").slideToggle();
+  });
+// Validación del formulario de contacto
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const email = document.getElementById('contact-email').value;
+
+  // Validar formato de correo
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!regex.test(email)) {
+    alert('Por favor, introduce un correo válido.');
+    return;
+  }
+
+  // Mostrar modal de confirmación
+  const modal = new bootstrap.Modal(document.getElementById('contactModal'));
+  modal.show();
+
+  // Reiniciar formulario
+  this.reset();
+});
